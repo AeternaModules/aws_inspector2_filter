@@ -1,7 +1,3 @@
-output "inspector2_filters_id" {
-  description = "Map of id values across all inspector2_filters, keyed the same as var.inspector2_filters"
-  value       = { for k, v in aws_inspector2_filter.inspector2_filters : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "inspector2_filters_action" {
   description = "Map of action values across all inspector2_filters, keyed the same as var.inspector2_filters"
   value       = { for k, v in aws_inspector2_filter.inspector2_filters : k => v.action if v.action != null && length(v.action) > 0 }
